@@ -7,11 +7,17 @@ using RegistroProductos.Entidades;
 using RegistroProductos.Datos;
 namespace RegistroProductos.Negocio
 {
+    /// <summary>
+    /// Evelyn Pamela Gutierrez Ruiz 08/09/2026
+    /// Esta clase se encarga de manejar la lógica de negocio relacionada con los productos, incluyendo agregar y obtener productos.
+    /// </summary>
     public class ProductosNegocio
     {
 
+        //Instancia de la clase ProductoDatos para acceder a los métodos de datos
         private ProductoDatos datos = new ProductoDatos();
 
+        //Metodo para agregar un producto, que llama al método correspondiente en la clase ProductoDatos
         public bool AgregarProducto(Producto producto, out string mensaje)
         {
             mensaje = "";
@@ -35,16 +41,18 @@ namespace RegistroProductos.Negocio
                 mensaje = "La existencia del producto no puede ser un valor negativo.";
                 return false;
             }
-
+            datos.AgregarProducto(producto);
             return true;
 
         }
 
-        public void registrarProducto( Producto producto) 
+        //Metodo para obtener la lista de productos, que llama al método correspondiente en la clase ProductoDatos
+        public void RegistrarProducto(Producto producto)
         {
             datos.AgregarProducto(producto);
         }
 
+        //Metodo para obtener la lista de productos, que llama al método correspondiente en la clase ProductoDatos
         public List<Producto> ObtenerProductos()
         {
             return datos.ObtenerProductos();

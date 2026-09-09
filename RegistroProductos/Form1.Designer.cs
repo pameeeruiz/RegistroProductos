@@ -37,7 +37,7 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtExistencia = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.btnRegist = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 42);
+            this.label1.Location = new System.Drawing.Point(161, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 16);
             this.label1.TabIndex = 0;
@@ -113,12 +113,12 @@
             this.txtNombre.Size = new System.Drawing.Size(156, 22);
             this.txtNombre.TabIndex = 7;
             // 
-            // textBox4
+            // txtPrecio
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 181);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(64, 22);
-            this.textBox4.TabIndex = 8;
+            this.txtPrecio.Location = new System.Drawing.Point(139, 181);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(64, 22);
+            this.txtPrecio.TabIndex = 8;
             // 
             // dgvProductos
             // 
@@ -142,12 +142,13 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(475, 172);
+            this.btnLimpiar.Location = new System.Drawing.Point(475, 185);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(140, 83);
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar  ";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnSalir
             // 
@@ -157,6 +158,7 @@
             this.btnSalir.TabIndex = 13;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // errorProvider1
             // 
@@ -171,7 +173,7 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnRegist);
             this.Controls.Add(this.dgvProductos);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtExistencia);
             this.Controls.Add(this.txtCodigo);
@@ -182,7 +184,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -200,7 +201,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtExistencia;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnRegist;
         private System.Windows.Forms.Button btnLimpiar;
